@@ -9,8 +9,8 @@ const getBuddys = (data) => {
     const buddysContainer = document.getElementById('buddys');
 
     for (const buddy of buddys) {
-        const p = document.createElement('p');
-        const names = document.createElement('p');
+        const p = document.createElement('h3');
+        const names = document.createElement('h3');
         p.innerText = buddy.email;
         buddysContainer.appendChild(p);
         const fullName = `Full Name: ${buddy.name.title} ${buddy.name.first} ${buddy.name.last}`;
