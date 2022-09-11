@@ -1,3 +1,17 @@
+#countryDetails {
+    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#countrys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .country {
     border: 2px solid tomato;
     margin: 10px;
