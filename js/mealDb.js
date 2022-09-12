@@ -10,7 +10,21 @@ const searchFood = () => {
 }
 const getSearchItems = (data) => {
     const items = data.meals;
+    const resultContainer = document.getElementById('searchResult');
     items.forEach(item => {
         console.log(item.strMeal);
+        const div = document.createElement('div');
+        div.classList.add('col');
+        div.innerHTML = `
+        <div class="card h-100">
+            <img src="${item.strMealThumb}" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">${item.strMeal}</h5>
+                <p class="card-text">${item.strInstructions.slice(0, 150)}</p>
+            </div>
+        </div>
+        `;
+        resultContainer.appendChild(div);
     });
 }
